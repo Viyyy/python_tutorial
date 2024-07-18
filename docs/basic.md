@@ -138,7 +138,7 @@ print(type(x)) # -> <class 'int'>
 
 - 错误的：
 
-```python-repl
+```python
 def append_to(element, to=[]):
     to.append(element)
     return to
@@ -149,11 +149,12 @@ print(my_list)  # 输出: [1]
 
 another_list = append_to(2)
 print(another_list)  # 输出: [1, 2]，这不是我们期望的结果
+
 ```
 
 - 推荐的：
 
-```python-repl
+```python
 def append_to(element, to=None):
     if to is None:
         to = []  # 创建一个新的列表
@@ -166,6 +167,7 @@ print(my_list)  # 输出: [1]
 
 another_list = append_to(2)
 print(another_list)  # 输出: [2]，这是期望的结果
+
 ```
 
 ## 函数声明

@@ -259,7 +259,7 @@ print(type(x)) # -&gt; &lt;class 'int'&gt;
 <ul>
 <li>错误的：</li>
 </ul>
-<pre><code class="language-python-repl">def append_to(element, to=[]):
+<pre><code class="language-python">def append_to(element, to=[]):
     to.append(element)
     return to
 
@@ -269,11 +269,12 @@ print(my_list)  # 输出: [1]
 
 another_list = append_to(2)
 print(another_list)  # 输出: [1, 2]，这不是我们期望的结果
+
 </code></pre>
 <ul>
 <li>推荐的：</li>
 </ul>
-<pre><code class="language-python-repl">def append_to(element, to=None):
+<pre><code class="language-python">def append_to(element, to=None):
     if to is None:
         to = []  # 创建一个新的列表
     to.append(element)
@@ -285,6 +286,7 @@ print(my_list)  # 输出: [1]
 
 another_list = append_to(2)
 print(another_list)  # 输出: [2]，这是期望的结果
+
 </code></pre>
 <h2 id="_6">函数声明</h2>
 <blockquote>
@@ -540,9 +542,9 @@ def divice(a:float, b:float)-&gt;float:
 <script>
   var getUpdateTime = function () {
       var currentTime = new Date();
-      var updateTime = new Date(`2024-07-18 17:04:07`);
+      var updateTime = new Date(`2024-07-18 17:23:28`);
       var timeDiff = currentTime - updateTime;
-      var relativeTime = `2024-07-18 17:04:07`;
+      var relativeTime = `2024-07-18 17:23:28`;
       if (timeDiff < 60000) {  // 小于1分钟
           relativeTime = "刚刚更新";
       }
