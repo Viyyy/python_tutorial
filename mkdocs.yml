@@ -1,7 +1,7 @@
 site_name: python入门培训
 # theme: 
 theme: readthedocs
-site_favicon: docs/image/favicon.ico
+site_favicon: image/favicon.ico
 repo_url: https://github.com/Viyyy/python_tutorial
 nav:
   - 引言: index.md
