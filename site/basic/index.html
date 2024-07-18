@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../docs/image/favicon.ico" />
+    <title>基础语法 - python入门培训</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u57fa\u7840\u8bed\u6cd5";
+        var mkdocs_page_input_path = "basic.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> python入门培训
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">引言</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../start/">开始</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">基础语法</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">变量声明</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">⭐好习惯：命名应该能够清晰描述变量的信息，方便其他开发者理解。</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#python">python的命名习惯：</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">基本数据类型</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#numeric-types">数字（Numeric Types）</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sequence-types">序列（Sequence Types）</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mapping-type">映射（Mapping Type）</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#set-types">集合（Set Types）</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#boolean-type">布尔类型（Boolean Type）</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">可变变量和不可变变量</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#immutable">不可变（Immutable）变量</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mutable">可变（Mutable）变量</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">函数声明</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">控制流</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#-if-elif-else">条件语句 - 使用 if, elif, else 关键字。</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#-for-while">循环 - for 循环和 while 循环。</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#-try-except">异常处理 - 使用 try 和 except。</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_8">行与缩进</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_9">注释</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_10">⭐好习惯：编写注释是编程中非常重要的一个方面，它有助于他人（或未来的你）理解代码的意图和工作原理。</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#typehint">类型注解：Typehint</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#typehint_1">⭐好习惯：使用typehint指定函数形参的类型以及函数返回的类型。</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_11">用途：</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../todo/">待完成</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">python入门培训</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">基础语法</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/Viyyy/python_tutorial/edit/master/docs/basic.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">基础语法</h1>
+<h2 id="_2">变量声明</h2>
+<p>在Python中，变量命名需要遵循以下规则：</p>
+<ol>
+<li><strong>变量名必须以字母（a-z, A-Z）或下划线（_）开头</strong> ，不能以数字开头。</li>
+<li><strong>变量名不能包含空格</strong> ，但可以使用下划线（_）来分隔单词，以提高可读性。</li>
+<li><strong>变量名不能包含标点符号</strong> ，如!、@、#、$、%、^、&amp;、*、(、)、-、+、=、{、}、[、]、:、;、"、'、&lt;、&gt;、?、/、\。</li>
+<li><strong>变量名不能是Python中的关键字</strong> ，如 <code>and</code>, <code>if</code>, <code>while</code>, <code>for</code>, <code>True</code>, <code>False</code>等。</li>
+<li><strong>变量名对大小写敏感</strong> ，这意味着 <code>variable</code>和 <code>Variable</code>是两个不同的变量。</li>
+</ol>
+<pre><code class="language-csharp">x = 10  # 整数
+y = &quot;Hello&quot;  # 字符串
+</code></pre>
+<blockquote>
+<p>Python是动态类型的语言，不需要显式声明变量的数据类型。</p>
+<h5 id="_3">⭐好习惯：命名应该能够清晰描述变量的信息，方便其他开发者理解。</h5>
+<h5 id="python">python的命名习惯：</h5>
+<ul>
+<li><strong>使用小写字母和下划线</strong> ：对于变量和函数，使用小写字母和下划线来提高可读性</li>
+<li><strong>使用大写字母来定义类名</strong> ：对于类名，使用大驼峰命名法（PascalCase），即每个单词的首字母都大写。</li>
+<li><strong>使用大写字母来定义常量</strong> ：对于常量，使用全部大写字母，并用下划线分隔单词。</li>
+<li><strong>私有变量和方法</strong> ：对于类中的私有变量和方法，使用两个前导下划线。</li>
+<li><strong>保持一致性</strong> ：在代码库中保持一致的命名习惯。</li>
+<li><strong>函数和方法参数</strong> ：参数名应该小写，必要时使用下划线。</li>
+</ul>
+</blockquote>
+<h3 id="_4">基本数据类型</h3>
+<h4 id="numeric-types">数字（Numeric Types）</h4>
+<ol>
+<li><strong>整数（int）</strong> ：表示整数，没有小数点。例如：<code>10</code>, <code>-5</code>, <code>0</code>.</li>
+<li><strong>浮点数（float）</strong> ：表示带有小数点的数。例如：<code>3.14</code>, <code>-0.001</code>, <code>5.0</code>.</li>
+<li><strong>复数（complex）</strong> ：表示实部和虚部的组合，使用 <code>j</code> 或 <code>J</code> 表示虚部。例如：<code>2 + 3j</code>, <code>1.5 - 2.5j</code>.</li>
+</ol>
+<h4 id="sequence-types">序列（Sequence Types）</h4>
+<ol>
+<li><strong>字符串（str）</strong> ：表示文本数据，由一系列字符组成。例如：<code>"Hello, World!"</code>, <code>'Python'</code>.</li>
+<li><strong>列表（list）</strong> ：表示有序的元素集合，元素可以是不同类型。例如：<code>[1, 'a', 3.14, [2, 3]]</code>.</li>
+<li><strong>元组（tuple）</strong> ：表示不可变的有序元素集合，元素可以是不同类型。例如：<code>(1, 'a', 3.14)</code>.</li>
+</ol>
+<h4 id="mapping-type">映射（Mapping Type）</h4>
+<ol>
+<li><strong>字典（dict）</strong> ：表示键值对的集合，键必须是不可变类型，通常是字符串或数字。例如：<code>{'name': 'Alice', 'age': 30}</code>.</li>
+</ol>
+<h4 id="set-types">集合（Set Types）</h4>
+<ol>
+<li><strong>集合（set）</strong> ：表示无序且元素唯一的集合，元素通常是不可变类型。例如：<code>{1, 2, 3}</code>.</li>
+<li><strong>冻结集合（frozenset）</strong> ：表示不可变的集合类型。例如：<code>frozenset({1, 2, 3})</code>.</li>
+</ol>
+<h4 id="boolean-type">布尔类型（Boolean Type）</h4>
+<ol>
+<li><strong>布尔（bool）</strong> ：表示逻辑值 <code>True</code> 或 <code>False</code>。例如：<code>True</code>, <code>False</code>.</li>
+</ol>
+<blockquote>
+<p>除了这些基本类型，Python 还有一些特殊的数据类型，如 <code>NoneType</code>，用于表示 <code>None</code> 值，这是一个特殊的常量，表示空值或无值。</p>
+</blockquote>
+<pre><code class="language-python"># 查看数据类型
+x = 10
+print(type(x)) # -&gt; &lt;class 'int'&gt;
+</code></pre>
+<h3 id="_5">可变变量和不可变变量</h3>
+<p>在 Python 中，变量是对象的引用。变量本身没有类型，它们引用的对象才有类型。根据对象是否可以被修改，可以将变量分为两类：可变（mutable）和不可变（immutable）。</p>
+<h4 id="immutable">不可变（Immutable）变量</h4>
+<p>不可变变量指的是那些一旦创建，其值就不能被更改的对象。这意味着如果尝试修改不可变对象，实际上会创建一个新的对象，并将变量指向这个新对象。</p>
+<p>以下是一些常见的不可变类型：</p>
+<ul>
+<li><strong>整数（int）</strong> ：整数类型的值一旦设定，就不能更改。</li>
+</ul>
+<pre><code class="language-python">   a = 10
+   a = a + 1  # 这实际上是将 a 指向了一个新的整数对象 11
+</code></pre>
+<ul>
+<li><strong>浮点数（float）</strong> ：浮点数也是不可变的。</li>
+</ul>
+<pre><code class="language-python">   b = 3.14
+   b = 2.71  # b 现在指向了新的浮点数对象 2.71
+</code></pre>
+<ul>
+<li><strong>字符串（str）</strong> ：字符串在 Python 中是不可变的。</li>
+</ul>
+<pre><code class="language-python">   s = &quot;hello&quot;
+   s = s + &quot; world&quot;  # s 现在指向了新的字符串对象 &quot;hello world&quot;
+</code></pre>
+<ul>
+<li><strong>元组（tuple）</strong> ：虽然元组可以包含可变对象，但元组本身是不可变的。</li>
+</ul>
+<pre><code class="language-python">   t = (1, 2, [3, 4])
+   t[2][0] = 5  # 这会改变列表中的元素，但不会改变元组本身
+   # t[0] = 100  # 这会引发错误，因为元组是不可变的
+</code></pre>
+<h4 id="mutable">可变（Mutable）变量</h4>
+<p>可变变量是指那些可以被修改的对象，也就是说，可以在不创建新对象的情况下改变对象的内部状态。</p>
+<p>以下是一些常见的可变类型：</p>
+<ul>
+<li><strong>列表（list）</strong> ：列表是可变的，你可以添加、删除或修改列表中的元素。</li>
+</ul>
+<pre><code class="language-python">   lst = [1, 2, 3]
+   lst[0] = 100  # 修改列表的第一个元素
+   lst.append(4)  # 向列表中添加一个新元素
+</code></pre>
+<ul>
+<li><strong>字典（dict）</strong> ：字典也是可变的，可以添加新的键值对或修改现有的键值对。</li>
+</ul>
+<pre><code class="language-python">   d = {'a': 1, 'b': 2}
+   d['a'] = 10  # 修改字典中的 'a' 键的值
+   d['c'] = 3   # 向字典中添加一个新的键值对
+</code></pre>
+<ul>
+<li><strong>集合（set）</strong> ：集合是可变的，可以添加或删除元素。</li>
+</ul>
+<pre><code class="language-python">   st = {1, 2, 3}
+   st.add(4)  # 向集合中添加一个新元素
+   st.remove(1)  # 从集合中删除一个元素
+</code></pre>
+<blockquote>
+<p>了解变量的可变性和不可变性对于理解 Python 中的数据结构和编写高效、无错误的代码至关重要。例如，不可变对象可以作为字典的键，而可变对象则不可以。</p>
+<h5 id="none">❗避坑：函数的形参如果是可变变量，默认值要设置为None</h5>
+</blockquote>
+<ul>
+<li>错误的：</li>
+</ul>
+<pre><code class="language-python-repl">def append_to(element, to=[]):
+    to.append(element)
+    return to
+
+# 调用函数
+my_list = append_to(1)
+print(my_list)  # 输出: [1]
+
+another_list = append_to(2)
+print(another_list)  # 输出: [1, 2]，这不是我们期望的结果
+</code></pre>
+<ul>
+<li>推荐的：</li>
+</ul>
+<pre><code class="language-python-repl">def append_to(element, to=None):
+    if to is None:
+        to = []  # 创建一个新的列表
+    to.append(element)
+    return to
+
+# 调用函数
+my_list = append_to(1)
+print(my_list)  # 输出: [1]
+
+another_list = append_to(2)
+print(another_list)  # 输出: [2]，这是期望的结果
+</code></pre>
+<h2 id="_6">函数声明</h2>
+<blockquote>
+<p>在Python中，使用def关键字来声明函数：</p>
+</blockquote>
+<pre><code class="language-python">def add(x, y):
+    # 函数体
+    return x + y
+</code></pre>
+<h2 id="_7">控制流</h2>
+<h3 id="-if-elif-else"><strong>条件语句</strong> - 使用 <code>if</code>, <code>elif</code>, <code>else</code> 关键字。</h3>
+<pre><code class="language-python">if x &gt; 0:
+    print(&quot;Positive&quot;)
+elif x == 0:
+    print(&quot;Zero&quot;)
+else:
+    print(&quot;Negative&quot;)
+</code></pre>
+<h3 id="-for-while"><strong>循环</strong> - <code>for</code> 循环和 <code>while</code> 循环。</h3>
+<pre><code class="language-python"># for循环
+for i in range(5):
+    print(i)
+
+# while循环
+while x &gt; 0:
+    print(x)
+    x -= 1
+</code></pre>
+<h3 id="-try-except"><strong>异常处理</strong> - 使用 <code>try</code> 和 <code>except</code>。</h3>
+<pre><code class="language-python">try:
+    # 可能引发异常的代码
+    pass
+except Exception as e:
+    # 异常处理代码
+    pass
+</code></pre>
+<h2 id="_8">行与缩进</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">特征/语言</th>
+<th style="text-align: center;">Python</th>
+<th style="text-align: center;">Java</th>
+<th style="text-align: center;">C#</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">代码块区分方式</td>
+<td style="text-align: center;">使用缩进</td>
+<td style="text-align: center;">使用大括号 <code>{}</code></td>
+<td style="text-align: center;">使用大括号 <code>{}</code></td>
+</tr>
+<tr>
+<td style="text-align: center;">行结束符号</td>
+<td style="text-align: center;">不需要分号 <code>;</code></td>
+<td style="text-align: center;">需要分号 <code>;</code></td>
+<td style="text-align: center;">需要分号 <code>;</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>python</li>
+</ul>
+<pre><code class="language-python"># Python中的单行代码
+x = 10  # 这是一行Python代码，不需要分号
+
+# Python中的代码块
+def my_function():
+    # 这是my_function的代码块
+    y = 20  # 块内的一个代码行
+    print(&quot;Hello, World!&quot;)  # 另一个代码行
+
+if x &gt; 10:
+    # 这是一个if语句的代码块
+    print(&quot;x is greater than 10&quot;)  # 块内的代码行
+
+</code></pre>
+<ul>
+<li>Java</li>
+</ul>
+<pre><code class="language-java">// Java中的单行代码
+int x = 10; // 这是一行Java代码，以分号结束
+
+// Java中的代码块
+public class MyClass {
+    public static void main(String[] args) {
+        // 这是main方法的代码块
+        int y = 20; // 块内的一个代码行
+        System.out.println(&quot;Hello, World!&quot;); // 另一个代码行
+    }
+}
+
+</code></pre>
+<ul>
+<li>C#</li>
+</ul>
+<pre><code class="language-csharp">// C#中的单行代码
+int x = 10; // 这是一行C#代码，以分号结束
+
+// C#中的代码块
+public class MyClass {
+    public static void Main(string[] args) {
+        // 这是Main方法的代码块
+        int y = 20; // 块内的一个代码行
+        Console.WriteLine(&quot;Hello, World!&quot;); // 另一个代码行
+    }
+}
+
+</code></pre>
+<h2 id="_9">注释</h2>
+<blockquote>
+<h5 id="_10">⭐好习惯：编写注释是编程中非常重要的一个方面，它有助于他人（或未来的你）理解代码的意图和工作原理。</h5>
+</blockquote>
+<ul>
+<li>单行注释：使用井号</li>
+</ul>
+<pre><code class="language-python"># 这里是单行注释的内容
+</code></pre>
+<ul>
+<li>多行注释：使用三引号</li>
+</ul>
+<pre><code class="language-python">'''
+这里是多行注释：
+注释1
+注释2
+……
+'''
+</code></pre>
+<ul>
+<li>区域划分：起始 <code># region 描述</code>，结束 <code># endregion</code></li>
+</ul>
+<pre><code class="language-python"># region 打招呼
+def hello():
+  print(&quot;hello, world.&quot;)
+# endregion
+</code></pre>
+<blockquote>
+<p>VSCode的注释快捷键：Ctrl+/</p>
+</blockquote>
+<h2 id="typehint">类型注解：Typehint</h2>
+<p>Type hinting（类型注解）是Python 3.5及以上版本中引入的一个特性，它允许开发者在代码中指定变量的预期类型。</p>
+<blockquote>
+<h5 id="typehint_1">⭐好习惯：使用typehint指定函数形参的类型以及函数返回的类型。</h5>
+</blockquote>
+<h3 id="_11">用途：</h3>
+<ol>
+<li><strong>代码可读性</strong> ：类型注解可以帮助开发者更快地理解代码的意图和数据流。</li>
+<li><strong>代码维护</strong> ：在代码重构或修改时，类型注解有助于确保更改不会破坏现有的数据类型假设。</li>
+<li><strong>静态类型检查</strong> ：使用像 <code>mypy</code>这样的静态类型检查工具，可以在不运行代码的情况下发现潜在的类型错误。</li>
+<li>
+<p><strong>IDE支持</strong> ：现代IDE和编辑器可以利用类型注解来提供更好的代码补全、错误提示和代码导航。</p>
+</li>
+<li>
+<p>没有使用typehint</p>
+</li>
+</ol>
+<pre><code class="language-python">def divice(a, b):
+    '''
+    计算两个数的商
+    :param a: 被除数
+    :param b: 除数
+    :return: 商
+    '''
+    assert b!= 0, &quot;除数不能为0&quot;
+    return a / b
+
+result = divice(&quot;Hello, &quot;, &quot;world!&quot;)  # 类型错误，字符串不是浮点数
+</code></pre>
+<ul>
+<li>使用了typehint</li>
+</ul>
+<pre><code class="language-python"># 可以使用mypy进行静态类型检查
+def divice(a:float, b:float)-&gt;float:
+    '''
+    计算两个数的商
+    :param a: 被除数
+    :param b: 除数
+    :return: 商
+    '''
+    assert b!= 0, &quot;除数不能为0&quot;
+    return a / b
+</code></pre>
+<pre><code class="language-python">def print_upper(s:str)-&gt;str:
+    '''
+    打印字符串的大写版本
+    :param s: 字符串
+    :return: 字符串的大写版本
+    '''
+    return s.upper() # 使用了typehint，IDE会有代码补全和错误提示
+</code></pre>
+              
+            </div>
+          </div><!-- Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. -->
+
+<footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../start/" class="btn btn-neutral float-left" title="开始"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../todo/" class="btn btn-neutral float-right" title="待完成">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p style="font-size:12px; padding:0; text-align:center">Documentation
+      built with <a
+          href="https://www.mkdocs.org/">MkDocs</a>.
+      <span id="updateTime"></span>
+      <br>
+      <span>
+          <b><a onclick="alert('本网站的所有信息仅供参考和学习之用，请您同意接受以下免责声明：\n  1.信息准确性：我们尽最大努力确保本网站上提供的所有信息准确无误。然而，我们不对信息的完整性、准确性、可靠性、适用性或可用性作任何明示或暗示的声明或保证；\n  2.学习建议：本网站提供的所有学习建议和信息仅供参考之用。我们不对任何因使用本网站信息而产生的任何直接或间接损失负责；\n  3.第三方链接：本网站可能包含指向第三方网站的链接。这些链接仅为方便用户而提供。我们对这些第三方网站的内容或可用性不承担任何责任;\n  4.知识产权：本网站上的所有内容（包括但不限于文本、图像、视频等）均受版权法保护；未经许可，任何人不得擅自复制、修改、传播或使用这些内容。')"
+                  style="color: blue;text-decoration: underline;font-weight:bold;cursor: pointer;">免责声明</a>：欢迎访问我们的学习网站。使用本网站，即表示您同意遵守本免责声明。<br>如果您不同意本免责声明中的任何内容，请停止使用本网站。</b>
+      </span>
+    </p>
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/Viyyy/python_tutorial" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../start/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../todo/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+<script>
+  var getUpdateTime = function () {
+      var currentTime = new Date();
+      var updateTime = new Date(`2024-07-18 17:01:27`);
+      var timeDiff = currentTime - updateTime;
+      var relativeTime = `2024-07-18 17:01:27`;
+      if (timeDiff < 60000) {  // 小于1分钟
+          relativeTime = "刚刚更新";
+      }
+      else if (timeDiff < 3600000) {  // 小于1小时
+          var minutes = Math.floor(timeDiff / 60000);
+          relativeTime = minutes + "分钟前";
+      } else if (timeDiff < 86400000) {  // 小于1天
+          var hours = Math.floor(timeDiff / 3600000);
+          relativeTime = hours + "小时前";
+      } else if (timeDiff < 604800000) {  // 小于7天
+          var days = Math.floor(timeDiff / 86400000);
+          relativeTime = days + "天前";
+      };
+      var updateTimeElement = document.getElementById("updateTime");
+      updateTimeElement.textContent = "网站最后更新时间：" + relativeTime;
+  }
+  getUpdateTime()
+  // 定时器，每隔一分钟调用一次 getUpdateTime 方法
+  setInterval(getUpdateTime, 60000);
+</script>
+</html>

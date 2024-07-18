@@ -1,2 +1,10 @@
 site_name: python入门培训
-email: https://github.com/Viyyy/python_tutorial
+# theme: 
+theme: readthedocs
+site_favicon: docs/image/favicon.ico
+repo_url: https://github.com/Viyyy/python_tutorial
+nav:
+  - 引言: index.md
+  - 开始: start.md
+  - 基础语法: basic.md
+  - 待完成: todo.md
