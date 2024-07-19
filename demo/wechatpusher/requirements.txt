@@ -1,0 +1,8 @@
+python-dotenv
+requests
+pandas
+schedule
+langchain
+langchain-openai
+langchain-community
+numpy==1.26
