@@ -96,8 +96,8 @@
 </ul>
 <h1 id="_2">养成好习惯</h1>
 <ul>
-<li>✨ 每个项目都写好一个requirements.txt，保证项目的可维护性、可移植性和稳定性。</li>
-<li>✨ 编写注释是编程中非常重要的一个方面，它有助于他人（或未来的你）理解代码的意图和工作原理。</li>
+<li>✨ 每个项目都写好一个 <code>requirements.txt</code>，保证项目的可维护性、可移植性和稳定性。</li>
+<li>✨ 编写注释，它有助于他人（或未来的你）理解代码的意图和工作原理。</li>
 <li>✨ 命名应该能够清晰描述变量的信息，方便其他开发者理解。</li>
 <li>✨ 开发时使用类型注解，这样有利于代码的维护。</li>
 <li>✨ ……</li>
@@ -105,7 +105,8 @@
 <hr />
 <h1 id="_3">注意别踩坑</h1>
 <ul>
-<li>⚠️ 使用可变变量时，要注意尽量不要在函数的形参中使用默认值。</li>
+<li>⚠️ VSCode选择 <code>System</code>版本，如果是 <code>User</code>版本有时会出现权限不足的情况。</li>
+<li>⚠️ 使用<code>可变变量</code>时，要注意尽量不要在函数的形参中使用默认值。</li>
 <li>⚠️ ……</li>
 </ul>
               
@@ -172,9 +173,9 @@
 <script>
   var getUpdateTime = function () {
       var currentTime = new Date();
-      var updateTime = new Date(`2024-07-19 10:45:19`);
+      var updateTime = new Date(`2024-07-19 11:37:27`);
       var timeDiff = currentTime - updateTime;
-      var relativeTime = `2024-07-19 10:45:19`;
+      var relativeTime = `2024-07-19 11:37:27`;
       if (timeDiff < 60000) {  // 小于1分钟
           relativeTime = "刚刚更新";
       }

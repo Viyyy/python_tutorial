@@ -60,6 +60,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#_5">代码编辑器的选择</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#vscodesystemuser">❗ 避坑：VSCode选择System版本，如果是User版本有时会出现权限不足的情况。</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#vscode-vs-pycharm">VSCode vs Pycharm</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#jupyter-notebooklab">Jupyter Notebook/lab</a>
@@ -78,7 +80,13 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#ai">AI编程助手</a>
+    <li class="toctree-l2"><a class="reference internal" href="#vscode">推荐的VSCode插件</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_11">格式化插件</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ai">AI编程助手</a>
+    </li>
+        </ul>
     </li>
     </ul>
                 </li>
@@ -144,6 +152,11 @@
 # conda env create -f environment.yml
 </code></pre>
 <h2 id="_5">代码编辑器的选择</h2>
+<blockquote>
+<p>推荐VSCode：轻量化，扩展性强，自由度高。</p>
+<p><img alt="1721359109037" src="../image/start/1721359109037.png" /></p>
+<h5 id="vscodesystemuser">❗ 避坑：VSCode选择<code>System</code>版本，如果是<code>User</code>版本有时会出现权限不足的情况。</h5>
+</blockquote>
 <h3 id="vscode-vs-pycharm">VSCode vs Pycharm</h3>
 <table>
 <thead>
@@ -265,10 +278,26 @@
 <li>当你需要创建包含代码和执行结果的文档，以展示项目或研究成果。</li>
 <li>当你需要向非技术背景的受众展示技术内容，并且希望他们能够理解代码的执行过程。</li>
 </ul>
-<h2 id="ai">AI编程助手</h2>
+<h2 id="vscode">推荐的VSCode插件</h2>
 <ul>
-<li>GitHub Copilot</li>
-<li>Fittencode，安装插件，可以使用微信登陆</li>
+<li><code>Office Viewer(Markdown Editor)</code>：用于markdown编辑</li>
+<li><code>Remote - SSH</code>：用于远程开发</li>
+<li><code>SQLite Viewer</code>：用于查看sqlite数据库</li>
+</ul>
+<h3 id="_11">格式化插件</h3>
+<ul>
+<li><code>Black formatter</code></li>
+</ul>
+<p>需要在VSCode的 <code>settings.json</code>里配置：</p>
+<pre><code class="language-json">&quot;[python]&quot;: {
+    &quot;editor.formatOnSave&quot;: true,
+    &quot;editor.defaultFormatter&quot;: &quot;ms-python.black-formatter&quot;
+  },
+</code></pre>
+<h3 id="ai">AI编程助手</h3>
+<ul>
+<li><code>GitHub Copilot</code></li>
+<li><code>Fittencode</code>，可以使用微信登陆</li>
 </ul>
               
             </div>
@@ -334,9 +363,9 @@
 <script>
   var getUpdateTime = function () {
       var currentTime = new Date();
-      var updateTime = new Date(`2024-07-19 10:45:19`);
+      var updateTime = new Date(`2024-07-19 11:37:27`);
       var timeDiff = currentTime - updateTime;
-      var relativeTime = `2024-07-19 10:45:19`;
+      var relativeTime = `2024-07-19 11:37:27`;
       if (timeDiff < 60000) {  // 小于1分钟
           relativeTime = "刚刚更新";
       }
