@@ -33,6 +33,13 @@ conda env export > environment.yml
 
 ## 代码编辑器的选择
 
+> 推荐VSCode：轻量化，扩展性强，自由度高。
+>
+> ![1721359109037](image/start/1721359109037.png)
+
+
+> ##### ❗ 避坑：VSCode选择`System`版本，如果是`User`版本有时会出现权限不足的情况。
+
 ### VSCode vs Pycharm
 
 |          特点/功能          |      Visual Studio Code (VSCode)      |                 PyCharm                 |
@@ -83,7 +90,26 @@ conda env export > environment.yml
 * 当你需要创建包含代码和执行结果的文档，以展示项目或研究成果。
 * 当你需要向非技术背景的受众展示技术内容，并且希望他们能够理解代码的执行过程。
 
-## AI编程助手
+## 推荐的VSCode插件
 
-- GitHub Copilot
-- Fittencode，安装插件，可以使用微信登陆
+- `Office Viewer(Markdown Editor)`：用于markdown编辑
+- `Remote - SSH`：用于远程开发
+- `SQLite Viewer`：用于查看sqlite数据库
+
+### 格式化插件
+
+- `Black formatter`
+
+需要在VSCode的 `settings.json`里配置：
+
+```json
+"[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+```
+
+### AI编程助手
+
+- `GitHub Copilot`
+- `Fittencode`，可以使用微信登陆
