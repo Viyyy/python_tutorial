@@ -441,13 +441,12 @@ def hello():
 <li><strong>代码可读性</strong> ：类型注解可以帮助开发者更快地理解代码的意图和数据流。</li>
 <li><strong>代码维护</strong> ：在代码重构或修改时，类型注解有助于确保更改不会破坏现有的数据类型假设。</li>
 <li><strong>静态类型检查</strong> ：使用像 <code>mypy</code>这样的静态类型检查工具，可以在不运行代码的情况下发现潜在的类型错误。</li>
-<li>
-<p><strong>IDE支持</strong> ：现代IDE和编辑器可以利用类型注解来提供更好的代码补全、错误提示和代码导航。</p>
-</li>
-<li>
-<p>没有使用typehint</p>
-</li>
+<li><strong>IDE支持</strong> ：现代IDE和编辑器可以利用类型注解来提供更好的代码补全、错误提示和代码导航。</li>
 </ol>
+<hr />
+<ul>
+<li>没有使用typehint</li>
+</ul>
 <pre><code class="language-python">def divice(a, b):
     '''
     计算两个数的商
@@ -460,6 +459,7 @@ def hello():
 
 result = divice(&quot;Hello, &quot;, &quot;world!&quot;)  # 类型错误，字符串不是浮点数
 </code></pre>
+<hr />
 <ul>
 <li>使用了typehint</li>
 </ul>
@@ -546,9 +546,9 @@ def divice(a:float, b:float)-&gt;float:
 <script>
   var getUpdateTime = function () {
       var currentTime = new Date();
-      var updateTime = new Date(`2024-07-18 17:43:16`);
+      var updateTime = new Date(`2024-07-19 10:45:19`);
       var timeDiff = currentTime - updateTime;
-      var relativeTime = `2024-07-18 17:43:16`;
+      var relativeTime = `2024-07-19 10:45:19`;
       if (timeDiff < 60000) {  // 小于1分钟
           relativeTime = "刚刚更新";
       }
