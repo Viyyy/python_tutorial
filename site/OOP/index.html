@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../image/favicon.ico" />
+    <title>面向对象编程 - python学习笔记</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u9762\u5411\u5bf9\u8c61\u7f16\u7a0b";
+        var mkdocs_page_input_path = "OOP.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> python学习笔记
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">引言</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../start/">开始</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../basic/">基础语法</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">面向对象编程</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">基本概念</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-class">1. 类（Class）</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-object">2. 对象（Object）</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-attribute">3. 属性（Attribute）</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-method">4. 方法（Method）</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-encapsulation">5. 封装（Encapsulation）</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-inheritance">6. 继承（Inheritance）</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-polymorphism">7. 多态（Polymorphism）</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">面向对象编程的特点</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q">Q: 什么时候用？</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q_1">Q: 什么时候不适用？</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../experience/">心得体会</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../todo/">待完成</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">python学习笔记</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">面向对象编程</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/Viyyy/python_tutorial/edit/master/docs/OOP.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">面向对象编程</h1>
+<p>面向对象编程（Object-Oriented Programming，简称OOP）是一种编程范式，它将数据和操作数据的方法组织在一起，形成一种称为“对象”的结构。面向对象编程的核心思想是将现实世界中的事物抽象成程序世界中的对象，通过对象之间的交互来完成程序的功能。</p>
+<p><img alt="Go 面向对象编程篇（三）：通过组合实现类的继承和方法重写 - 极客书房" src="https://tse1-mm.cn.bing.net/th/id/OIP-C.t2klS103O6n00M4jUvvLzgHaE7?rs=1&amp;pid=ImgDetMain" /></p>
+<h2 id="_2">基本概念</h2>
+<h3 id="1-class">1. 类（Class）</h3>
+<p>类是面向对象编程的基础，它是一个抽象的概念，用于描述具有相同属性和方法的对象的集合。类定义了对象的蓝图，规定了对象的属性（数据）和行为（方法）。</p>
+<h3 id="2-object">2. 对象（Object）</h3>
+<p>对象是类的实例，是具体的、可操作的数据实体。每个对象都有自己的状态和行为。例如，在现实世界中，斗牛犬、小猎犬和德国牧羊犬都是“狗”这个类的实例。</p>
+<blockquote>
+<p>类与对象的关系：</p>
+<ul>
+<li>类是对具体事物（对象）的抽象化。</li>
+<li>对象是类的具体化。</li>
+</ul>
+<p><img alt="Java 对象和类_举例说明java中的对象-CSDN博客" src="https://www.runoob.com/wp-content/uploads/2013/12/20210105-java-object-1.png" /></p>
+</blockquote>
+<h3 id="3-attribute">3. 属性（Attribute）</h3>
+<p>属性是对象所包含的数据，用来描述对象的某些特征。在类中，属性通常被定义为变量。</p>
+<h3 id="4-method">4. 方法（Method）</h3>
+<p>方法是对象可以执行的操作，它通常表现为函数。方法是类的一部分，用于操作对象的属性或实现某些功能。</p>
+<h3 id="5-encapsulation">5. 封装（Encapsulation）</h3>
+<p>封装是指将对象的实现细节隐藏起来，仅对外暴露必要的接口。封装可以保护对象的数据不被外部直接访问，保证了数据的安全性和一致性。</p>
+<h3 id="6-inheritance">6. 继承（Inheritance）</h3>
+<p>继承是面向对象编程中实现代码复用的机制。通过继承，子类可以继承父类的属性和方法，并可以添加新的属性和方法或覆盖（Override）父类的方法。</p>
+<h3 id="7-polymorphism">7. 多态（Polymorphism）</h3>
+<p>多态是指同一个方法在不同类型的对象上具有不同的行为。在面向对象编程中，多态通常通过继承和接口实现，使得不同的对象可以响应相同的消息，执行不同的操作。</p>
+<pre><code class="language-python">from typing import Any, List
+from abc import ABC, abstractmethod
+
+class PrinterBase:
+    '''
+    PrinterBase 类，所有打印机类的基类
+    '''
+    def __init__(self, name:str):
+        self.name = name
+
+    @abstractmethod
+    def print(self, content:Any)-&gt;None:
+       pass
+
+class ColorPrinter(PrinterBase):
+    '''
+    ColorPrinter 类，彩色打印机类，继承 PrinterBase 类
+    '''
+    def __init__(self, name:str, colors:List[str]):
+        super().__init__(name)
+        self.colors = colors
+
+    def print(self, content:Any)-&gt;None:
+        print(f&quot;{content} in {self.colors}&quot;)
+
+class BlackAndWhitePrinter(PrinterBase):
+    '''
+    BlackAndWhitePrinter 类，黑白打印机类，继承 PrinterBase 类
+    '''
+    def __init__(self, name):
+        super().__init__(name)
+
+    def print(self, content:Any)-&gt;None:
+        print(f&quot;{content} in black and white&quot;)
+
+# 实例化对象
+color_printer = ColorPrinter(&quot;HP Color LaserJet MFP M281fdw&quot;, [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;])
+black_and_white_printer = BlackAndWhitePrinter(&quot;Epson WorkForce 2540&quot;)
+
+# 多态，调用不同打印机类的 print 方法
+content = &quot;Hello, world!&quot;
+color_printer.print(content)
+black_and_white_printer.print(content)
+</code></pre>
+<h2 id="_3">面向对象编程的特点</h2>
+<ul>
+<li><strong>模块化</strong> ：通过类和对象将程序划分为独立的模块，提高了代码的可重用性和可维护性。</li>
+<li><strong>易扩展</strong> ：通过继承和多态，可以方便地扩展和维护代码。</li>
+<li><strong>易理解</strong> ：面向对象编程更接近人类思维模式，便于理解和分析问题。</li>
+</ul>
+<h2 id="q">Q: 什么时候用？</h2>
+<ul>
+<li>需要代码重用、模块化设计、模拟现实世界关系以及易于维护和扩展的复杂系统开发场景时。</li>
+</ul>
+<h2 id="q_1">Q: 什么时候不适用？</h2>
+<ul>
+<li>编写简单的脚本或工具时</li>
+<li>做数据处理或转换等函数式工作时</li>
+</ul>
+              
+            </div>
+          </div><!-- Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. -->
+
+<footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../basic/" class="btn btn-neutral float-left" title="基础语法"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../experience/" class="btn btn-neutral float-right" title="心得体会">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p style="font-size:12px; padding:0; text-align:center">Documentation
+      built with <a
+          href="https://www.mkdocs.org/">MkDocs</a>.
+      <span id="updateTime"></span>
+      <br>
+      <span>
+          <b><a onclick="alert('本网站的所有信息仅供参考和学习之用，请您同意接受以下免责声明：\n  1.信息准确性：我们尽最大努力确保本网站上提供的所有信息准确无误。然而，我们不对信息的完整性、准确性、可靠性、适用性或可用性作任何明示或暗示的声明或保证；\n  2.学习建议：本网站提供的所有学习建议和信息仅供参考之用。我们不对任何因使用本网站信息而产生的任何直接或间接损失负责；\n  3.第三方链接：本网站可能包含指向第三方网站的链接。这些链接仅为方便用户而提供。我们对这些第三方网站的内容或可用性不承担任何责任;\n  4.知识产权：本网站上的所有内容（包括但不限于文本、图像、视频等）均受版权法保护；未经许可，任何人不得擅自复制、修改、传播或使用这些内容。')"
+                  style="color: blue;text-decoration: underline;font-weight:bold;cursor: pointer;">免责声明</a>：欢迎访问我们的学习网站。使用本网站，即表示您同意遵守本免责声明。<br>如果您不同意本免责声明中的任何内容，请停止使用本网站。</b>
+      </span>
+    </p>
+  </div>
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/Viyyy/python_tutorial" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../basic/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../experience/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+<script>
+  var getUpdateTime = function () {
+      var currentTime = new Date();
+      var updateTime = new Date(`2024-07-19 14:56:01`);
+      var timeDiff = currentTime - updateTime;
+      var relativeTime = `2024-07-19 14:56:01`;
+      if (timeDiff < 60000) {  // 小于1分钟
+          relativeTime = "刚刚更新";
+      }
+      else if (timeDiff < 3600000) {  // 小于1小时
+          var minutes = Math.floor(timeDiff / 60000);
+          relativeTime = minutes + "分钟前";
+      } else if (timeDiff < 86400000) {  // 小于1天
+          var hours = Math.floor(timeDiff / 3600000);
+          relativeTime = hours + "小时前";
+      } else if (timeDiff < 604800000) {  // 小于7天
+          var days = Math.floor(timeDiff / 86400000);
+          relativeTime = days + "天前";
+      };
+      var updateTimeElement = document.getElementById("updateTime");
+      updateTimeElement.textContent = "网站最后更新时间：" + relativeTime;
+  }
+  getUpdateTime()
+  // 定时器，每隔一分钟调用一次 getUpdateTime 方法
+  setInterval(getUpdateTime, 60000);
+</script>
+</html>
