@@ -37,8 +37,7 @@ conda env export > environment.yml
 >
 > ![1721359109037](image/start/1721359109037.png)
 
-
-> ##### ❗ 避坑：VSCode选择`System`版本，如果是`User`版本有时会出现权限不足的情况。
+> ##### ❗ 避坑：VSCode选择 `System`版本，如果是 `User`版本有时会出现权限不足的情况。
 
 ### VSCode vs Pycharm
 
@@ -95,6 +94,7 @@ conda env export > environment.yml
 - `Office Viewer(Markdown Editor)`：用于markdown编辑
 - `Remote - SSH`：用于远程开发
 - `SQLite Viewer`：用于查看sqlite数据库
+- `vscode-drawio`: 用于绘制流程图、技术路线图等结构化图
 
 ### 格式化插件
 
