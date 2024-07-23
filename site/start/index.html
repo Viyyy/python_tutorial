@@ -60,7 +60,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#_5">代码编辑器的选择</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#vscodesystemuser">❗ 避坑：VSCode选择System版本，如果是User版本有时会出现权限不足的情况。</a>
+    <li class="toctree-l3"><a class="reference internal" href="#vscode-system-user">❗ 避坑：VSCode选择 System版本，如果是 User版本有时会出现权限不足的情况。</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#vscode-vs-pycharm">VSCode vs Pycharm</a>
     </li>
@@ -97,6 +97,14 @@
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../OOP/">面向对象编程</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../paradigm/">编程范式对比</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../recommend/">推荐资料</a>
                 </li>
               </ul>
               <ul>
@@ -159,7 +167,7 @@
 <blockquote>
 <p>推荐VSCode：轻量化，扩展性强，自由度高。</p>
 <p><img alt="1721359109037" src="../image/start/1721359109037.png" /></p>
-<h5 id="vscodesystemuser">❗ 避坑：VSCode选择<code>System</code>版本，如果是<code>User</code>版本有时会出现权限不足的情况。</h5>
+<h5 id="vscode-system-user">❗ 避坑：VSCode选择 <code>System</code>版本，如果是 <code>User</code>版本有时会出现权限不足的情况。</h5>
 </blockquote>
 <h3 id="vscode-vs-pycharm">VSCode vs Pycharm</h3>
 <table>
@@ -287,6 +295,7 @@
 <li><code>Office Viewer(Markdown Editor)</code>：用于markdown编辑</li>
 <li><code>Remote - SSH</code>：用于远程开发</li>
 <li><code>SQLite Viewer</code>：用于查看sqlite数据库</li>
+<li><code>vscode-drawio</code>: 用于绘制流程图、技术路线图等结构化图</li>
 </ul>
 <h3 id="_11">格式化插件</h3>
 <ul>
@@ -367,9 +376,9 @@
 <script>
   var getUpdateTime = function () {
       var currentTime = new Date();
-      var updateTime = new Date(`2024-07-19 14:56:01`);
+      var updateTime = new Date(`2024-07-23 11:17:12`);
       var timeDiff = currentTime - updateTime;
-      var relativeTime = `2024-07-19 14:56:01`;
+      var relativeTime = `2024-07-23 11:17:12`;
       if (timeDiff < 60000) {  // 小于1分钟
           relativeTime = "刚刚更新";
       }
