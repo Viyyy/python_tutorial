@@ -222,15 +222,15 @@ black_and_white_printer.print(content)
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    <p style="font-size:12px; padding:0; text-align:center">Documentation
-      built with <a
-          href="https://www.mkdocs.org/">MkDocs</a>.
+    <p style="font-size:12px; padding:0; text-align:center">Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.
       <span id="updateTime"></span>
       <br>
       <span>
           <b><a onclick="alert('本网站的所有信息仅供参考和学习之用，请您同意接受以下免责声明：\n  1.信息准确性：我们尽最大努力确保本网站上提供的所有信息准确无误。然而，我们不对信息的完整性、准确性、可靠性、适用性或可用性作任何明示或暗示的声明或保证；\n  2.学习建议：本网站提供的所有学习建议和信息仅供参考之用。我们不对任何因使用本网站信息而产生的任何直接或间接损失负责；\n  3.第三方链接：本网站可能包含指向第三方网站的链接。这些链接仅为方便用户而提供。我们对这些第三方网站的内容或可用性不承担任何责任;\n  4.知识产权：本网站上的所有内容（包括但不限于文本、图像、视频等）均受版权法保护；未经许可，任何人不得擅自复制、修改、传播或使用这些内容。')"
                   style="color: blue;text-decoration: underline;font-weight:bold;cursor: pointer;">免责声明</a>：欢迎访问我们的学习网站。使用本网站，即表示您同意遵守本免责声明。<br>如果您不同意本免责声明中的任何内容，请停止使用本网站。</b>
       </span>
+      <br>
+      <a href="https://beian.miit.gov.cn/" class="hover:underline" target="_blank">粤ICP备2024226229号</a>
     </p>
   </div>
 </footer>
@@ -272,9 +272,9 @@ black_and_white_printer.print(content)
 <script>
   var getUpdateTime = function () {
       var currentTime = new Date();
-      var updateTime = new Date(`2024-07-24 21:42:42`);
+      var updateTime = new Date(`2024-07-24 21:52:28`);
       var timeDiff = currentTime - updateTime;
-      var relativeTime = `2024-07-24 21:42:42`;
+      var relativeTime = `2024-07-24 21:52:28`;
       if (timeDiff < 60000) {  // 小于1分钟
           relativeTime = "刚刚更新";
       }
